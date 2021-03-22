@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>H2O</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Project">
+    <meta name="author" content="UI Programming">
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+      button{
+        height: 50px;
+        width: 100px;
+      }
+
+      .displaynone{
+        display: none;
+      }
+
+      .displayblock{
+        display: block;
+      }
+
+      #confirm{
+        background: #111;
+        color: #fff;
+      }
+
+
+    </style>
+</head>
+
+<body onload="pageLoaded()">
+  <h1 id="text"></h1>
+
+  <h2>Point Player: <span id="pointPlayer">0</span> - Point Bots: <span id="pointBots">0</span></h2>
+
+  <canvas id="game" width="1200" height="600" style="border: black 1px solid;">
+      Oops! looks like your browser does not support canvas tag
+  </canvas>
+  <br>
+  <button id="play">Play</button>
+
+  <button id="send" class="displaynone">Send Water</button>
+  <button id="load" class="displaynone">Load Water</button>
+  <button id="protect" class="displaynone">Umbrella</button>
+  <button id="confirm" class="displaynone">Confirm</button>
+
+ 
+
+  <img src="images/bg-1.png" id="bg" class="displaynone">
+  <img src="images/perso-1.png" id="person1" class="displaynone">
+  <img src="images/perso-2.png" id="person2" class="displaynone">
+  <img src="images/umbrella-r.png" id="umbrellar" class="displaynone">
+  <img src="images/umbrella-l.png" id="umbrellal" class="displaynone">
+  <img src="images/seau-deau-l.png" id="seaueaul" class="displaynone">
+  <img src="images/seau-deau-r.png" id="seaueaur" class="displaynone">
+  <img src="images/seau-vide.png" id="seauvide" class="displaynone">
+  <img src="images/lance.png" id="lancel" class="displaynone">
+  <img src="images/lance-l.png" id="lancer" class="displaynone">
+</div>
+</body>
+    <script src="js/script.js"></script>
+</html>
