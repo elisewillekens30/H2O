@@ -7,58 +7,84 @@
     <meta name="description" content="Project">
     <meta name="author" content="UI Programming">
     <link rel="stylesheet" href="./css/style.css">
-    <style>
-      button{
-        height: 50px;
-        width: 100px;
-      }
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">  
 
-      .displaynone{
-        display: none;
-      }
+    <link rel="manifest" href="manifest.json">
+    <script src="register.js"></script>
+    <script src="service_worker.js"></script>
+    <meta name="keywords" content="HTML, CSS, JavaScript">
 
-      .displayblock{
-        display: block;
-      }
-
-      #confirm{
-        background: #111;
-        color: #fff;
-      }
-
-
-    </style>
 </head>
 
 <body onload="pageLoaded()">
-  <h1 id="text"></h1>
 
-  <h2>Point Player: <span id="pointPlayer">0</span> - Point Bots: <span id="pointBots">0</span></h2>
-
-  <canvas id="game" width="1200" height="600" style="border: black 1px solid;">
-      Oops! looks like your browser does not support canvas tag
+  <div id="interface">
+    <div id="infoPlayer"><h3>Player</h3><h2>0</h2></div>
+    <div id="infoName">
+      <div><h1>H2O</h1></div>
+      <div>
+        <h3>
+          <span id="currentPartie"></span>/<span id="nbPartie"></span>
+        </h3>
+      </div>
+    </div>
+    <div id="infoBots"><h2>0</h2><h3>Bots</h3></div>
+  </div>
+  
+  <canvas id="game" width="900" height="500" style="border: 1px solid #000;">
+    Oops! looks like your browser does not support canvas tag
   </canvas>
-  <br>
-  <button id="play">Play</button>
 
-  <button id="send" class="displaynone">Send Water</button>
-  <button id="load" class="displaynone">Load Water</button>
-  <button id="protect" class="displaynone">Umbrella</button>
-  <button id="confirm" class="displaynone">Confirm</button>
+  <div id="form" class="popup">
+    <div>
+      <div class="name"><h1>H2O</h1></div>
+      <label for="name">Your player Name:</label>
+      <input type="text" name="name" id="nameplayer"><br><br>
+      <label for="number">Number Parties:</label>
+      <input type="number" id="nbparties" name="number" value="3" range="1"><br>
+      <button id="playForm" class="playbtn">Play</button>
+    </div> 
+  </div>
 
- 
+  <div id="rules" class="displaynone popup">
+    <div>
+      <div class="name"><h1>H2O</h1></div>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae corporis facilis voluptates iure quam vero, facere eligendi est eos aliquam distinctio modi impedit velit quia?</p>
+      <button id="playRules" class="playbtn">Start</button>
+    </div>
+  </div>
 
-  <img src="images/bg-1.png" id="bg" class="displaynone">
-  <img src="images/perso-1.png" id="person1" class="displaynone">
-  <img src="images/perso-2.png" id="person2" class="displaynone">
-  <img src="images/umbrella-r.png" id="umbrellar" class="displaynone">
-  <img src="images/umbrella-l.png" id="umbrellal" class="displaynone">
-  <img src="images/seau-deau-l.png" id="seaueaul" class="displaynone">
-  <img src="images/seau-deau-r.png" id="seaueaur" class="displaynone">
-  <img src="images/seau-vide.png" id="seauvide" class="displaynone">
-  <img src="images/lance.png" id="lancel" class="displaynone">
-  <img src="images/lance-l.png" id="lancer" class="displaynone">
-</div>
+  <div id="info" class="displaynone popup">
+    <div>
+      <div class="name"><h1>H2O</h1></div>
+      <p></p>
+      <button id="replay" class="playbtn">Replay</button>
+    </div>
+  </div>
+
+
+  <div id="end" class="popup displaynone">
+    <div>
+      <div class="name"><h1>H2O</h1></div>
+      <div>
+        <div><span id="namePlayerend">Player</span><span id="pointsPlayerend">0</span></div>
+        <div><span>Bots</span><span id="pointsBotsend">0</span></div>
+      </div>
+      <div id="textEnd"></div>
+      <button id="replayform" class="playbtn">New Game</button>
+    </div>
+  </div>
+
+
+  <div id="buttons">
+    <button id="sends" class="btn"></button>
+    <button id="load" class="btn"></button>
+    <button id="protect" class="btn"></button>
+  </div>
+  
+
 </body>
     <script src="js/script.js"></script>
 </html>
