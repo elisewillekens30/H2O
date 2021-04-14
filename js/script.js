@@ -341,7 +341,8 @@ function pageLoaded() {
             // Store
             localStorage.setItem('player', JSON.stringify(playerSauv));
             // Retrieve
-            console.log(localStorage.getItem("playerSauv"));
+            var donnees = localStorage.getItem("playerSauv");
+            console.log('player: ', JSON.parse(donnees));
          
     }
 
