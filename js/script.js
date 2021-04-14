@@ -332,17 +332,31 @@ function pageLoaded() {
     function addScore(){
 
         var playerSauv = {
-            "firstName":"John", 
-            "lastName":"Doe", 
-            "age":50, 
-            "eyeColor":"blue"
+            "name": nameplayer, 
+            "water":player.water, 
+            "play":player.play, 
+            "animation":player.animation,
+            "win": player.win,
+            "numberwin":playerPoint,
+        };
+        
+        var botsSauv = {
+            "name": "Bots", 
+            "water":bots.water, 
+            "play":bots.play, 
+            "animation":bots.animation,
+            "win": bots.win,
+            "numberwin":botsPoint,
         };
         
             // Store
             localStorage.setItem('playerSauv', JSON.stringify(playerSauv));
+            localStorage.setItem('botsSauv', JSON.stringify(botsSauv));
             // Retrieve
-            var donnees = localStorage.getItem("playerSauv");
-            console.log(JSON.parse(donnees));
+            var donneesPlayer = localStorage.getItem("playerSauv");
+            var donneesBots = localStorage.getItem("botsSauv");
+            console.log(JSON.parse(donneesPlayer));
+            console.log(JSON.parse(donneesBots));
          
     }
 
