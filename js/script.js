@@ -331,7 +331,12 @@ function pageLoaded() {
 
     function addScore(){
 
-        var playerSauv = ["elise", "true", 12];
+        var playerSauv = {
+            firstName:"John", 
+            lastName:"Doe", 
+            age:50, 
+            eyeColor:"blue"
+        };
         
             // Store
             localStorage.setItem("playerSauv", playerSauv);
