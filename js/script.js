@@ -330,11 +330,13 @@ function pageLoaded() {
     }
 
     function addScore(){
+
+        var playerSauv = ["elise", "true", 12];
         
             // Store
-            localStorage.setItem("lastname", "Smith");
+            localStorage.setItem("playerSauv", playerSauv);
             // Retrieve
-            console.log(localStorage.getItem("lastname"));
+            console.log(localStorage.getItem("playerSauv"));
          
     }
 
