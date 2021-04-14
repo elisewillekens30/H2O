@@ -109,7 +109,6 @@ function pageLoaded() {
             drawAnimation();
             showButtons();
             
-            addScore();
 
             if(player.win||bots.win)endAnimation();
 
@@ -148,6 +147,7 @@ function pageLoaded() {
         newround=true;
         player.play=this.id;
         round();
+        addScore();
     }
 
     function botsAttack(){
