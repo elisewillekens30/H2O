@@ -21,8 +21,6 @@ function pageLoaded() {
     initObject();
     initPlayer();
 
-    addScore();
-
     document.getElementById('playForm').addEventListener('click', function (){
         document.getElementById('rules').classList.remove("displaynone");
         document.getElementById('form').classList.add('displaynone');
@@ -110,6 +108,8 @@ function pageLoaded() {
     
             drawAnimation();
             showButtons();
+            
+            addScore();
 
             if(player.win||bots.win)endAnimation();
 
