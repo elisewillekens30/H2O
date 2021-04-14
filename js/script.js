@@ -330,16 +330,12 @@ function pageLoaded() {
     }
 
     function addScore(){
-
-        //var namePlayer = urlParam.get("playerName");
-        var h2o = {
-            name : "essai",
-            score : 12,
-        };
-
-        localStorage.setItem('player', JSON.stringify(h2o));
-        var npcObjects = localStorage.getItem('player');
-        console.log('player: ', JSON.parse(npcObjects));
+        
+            // Store
+            localStorage.setItem("lastname", "Smith");
+            // Retrieve
+            console.log(localStorage.getItem("lastname"));
+         
     }
 
    /* function updateScore(){
