@@ -339,10 +339,10 @@ function pageLoaded() {
         };
         
             // Store
-            localStorage.setItem('player', JSON.stringify(playerSauv));
+            localStorage.setItem('playerSauv', JSON.stringify(playerSauv));
             // Retrieve
             var donnees = localStorage.getItem("playerSauv");
-            console.log('player: ', JSON.parse(donnees));
+            console.log(JSON.parse(donnees));
          
     }
 
