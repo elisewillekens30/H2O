@@ -16,9 +16,12 @@ function pageLoaded() {
     var playerPoint=0;
     var currentPartie=0;
 
+
     //initGame();
     initObject();
     initPlayer();
+
+    addScore();
 
     document.getElementById('playForm').addEventListener('click', function (){
         document.getElementById('rules').classList.remove("displaynone");
@@ -27,7 +30,7 @@ function pageLoaded() {
         document.querySelector('#infoPlayer').querySelector('h3').innerHTML = nameplayer;
         nbGame = document.getElementById('nbparties').value;
         document.querySelector('#nbPartie').innerHTML = nbGame;
-        document.querySelector('#currentPartie').innerHTML = 1; 
+        document.querySelector('#currentPartie').innerHTML = 0; 
         
     });
 
@@ -304,7 +307,6 @@ function pageLoaded() {
 
 
     function updateGame(){
-        console.log("currentPartie->"+ currentPartie +" nbGame->"+ nbGame);
         var textend = "";
         if(currentPartie==nbGame-1){
             document.getElementById('end').classList.remove('displaynone');
@@ -326,6 +328,27 @@ function pageLoaded() {
             document.querySelector('#nbPartie').innerHTML = 0;    
         }
     }
+
+    function addScore(){
+
+        //var namePlayer = urlParam.get("playerName");
+        var h2o = {
+            name : "essai",
+            score : 12,
+        };
+
+        localStorage.setItem('player', JSON.stringify(h2o));
+        var npcObjects = localStorage.getItem('player');
+        console.log('player: ', JSON.parse(npcObjects));
+    }
+
+   /* function updateScore(){
+        var datascore = JSON.parse(window.localStorage.getItem('player'));
+       
+        document.getElementById('highScore').innerHTML=datascore.score;
+        document.getElementById('highName').innerHTML=datascore.name;
+
+    }*/
 
 }
 
