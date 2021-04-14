@@ -332,10 +332,10 @@ function pageLoaded() {
     function addScore(){
 
         var playerSauv = {
-            firstName:"John", 
-            lastName:"Doe", 
-            age:50, 
-            eyeColor:"blue"
+            "firstName":"John", 
+            "lastName":"Doe", 
+            "age":50, 
+            "eyeColor":"blue"
         };
         
             // Store
