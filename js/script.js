@@ -339,7 +339,7 @@ function pageLoaded() {
         };
         
             // Store
-            localStorage.setItem("playerSauv", playerSauv);
+            localStorage.setItem('player', JSON.stringify(playerSauv));
             // Retrieve
             console.log(localStorage.getItem("playerSauv"));
          
