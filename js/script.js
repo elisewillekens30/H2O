@@ -405,6 +405,8 @@ function pageLoaded() {
     currentPartie=donneesPlayer.currentPartie;
     nbGame=donneesPlayer.nbGame;
 
+    console.log("nameplayer : " + nameplayer + " playerPoint :"  + playerPoint + " currentPartie : "+ currentPartie);
+
 
     console.log(JSON.parse(donneesBots));
 
