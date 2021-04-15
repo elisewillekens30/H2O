@@ -417,7 +417,7 @@ function pageLoaded() {
     currentPartie=donneesPlayer.currentPartie;
     nbGame=donneesPlayer.nbGame;
 
-    console.log(donneesPlayer.name);
+    console.log(playerPoint);
 
     donneesBots=JSON.parse(donneesBots);
 
