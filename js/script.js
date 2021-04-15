@@ -14,7 +14,7 @@ function pageLoaded() {
     var nameplayer="Player";
     var botsPoint=0;
     var playerPoint=0;
-    var currentPartie=0;
+    var currentPartie=1;
     var saveDonne =false;
 
     //initGame();
@@ -33,18 +33,21 @@ function pageLoaded() {
     document.getElementById('playForm').addEventListener('click', function (){
         document.getElementById('rules').classList.remove("displaynone");
         document.getElementById('form').classList.add('displaynone');
-
+        nameplayer = document.getElementById('nameplayer').value;
         document.querySelector('#infoPlayer').querySelector('h3').innerHTML = nameplayer;
-        document.querySelector('#infoPlayer').querySelector('h2').innerHTML = playerPoint;
-        document.querySelector('#infoBots').querySelector('h2').innerHTML = botsPoint;
+        document.querySelector('#infoPlayer').querySelector('h2').innerHTML = 0;
+        document.querySelector('#infoBots').querySelector('h2').innerHTML = 0;
+        nbGame = document.getElementById('nbparties').value;
         document.querySelector('#nbPartie').innerHTML = nbGame;
-        document.querySelector('#currentPartie').innerHTML = 0; 
+        document.querySelector('#currentPartie').innerHTML = 1; 
     });
 
     document.getElementById('playResume').addEventListener('click', function(){
         document.getElementById('resume').classList.add('displaynone');
         updateScore();
         document.querySelector('#infoPlayer').querySelector('h3').innerHTML = nameplayer;
+        document.querySelector('#infoPlayer').querySelector('h2').innerHTML = playerPoint;
+        document.querySelector('#infoBots').querySelector('h2').innerHTML = botsPoint;
         document.querySelector('#nbPartie').innerHTML = nbGame;
         document.querySelector('#currentPartie').innerHTML = currentPartie; 
     });
@@ -220,7 +223,7 @@ function pageLoaded() {
         nameplayer="Player";
         botsPoint=0;
         playerPoint=0;
-        currentPartie=0;
+        currentPartie=1;
         document.getElementById('form').classList.remove('displaynone');
     }
 
@@ -362,7 +365,6 @@ function pageLoaded() {
             "animation":player.animation,
             "win": player.win,
             "numberwin":playerPoint,
-            "save":saveDonne,
             "currentPartie":currentPartie,
             "nbGame":nbGame,
         };
