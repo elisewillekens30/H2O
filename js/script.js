@@ -419,7 +419,7 @@ function pageLoaded() {
 
     console.log(donneesPlayer.name);
 
-    donneesBots=(JSON.parse(donneesBots);
+    donneesBots=JSON.parse(donneesBots);
 
     bots.water= donneesBots.water;
     bots.play=donneesBots.play;
