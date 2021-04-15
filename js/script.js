@@ -25,6 +25,11 @@ function pageLoaded() {
     console.log(save);
     if(save){
         document.getElementById('resume').classList.remove("displaynone");
+        document.querySelector('#namePlayerResume').innerHTML = nameplayer;
+        document.querySelector('#pointsPlayerResume').innerHTML = playerPoint;
+        document.querySelector('#pointsBotsendResume').innerHTML = botsPoint;
+        document.querySelector('#totalPartiesBotsResume').innerHTML = nbGame;
+        document.querySelector('#totalPartiesPlayerResume').innerHTML = nbGame;
     }else{
         document.getElementById('form').classList.remove("displaynone");
     }
@@ -45,11 +50,15 @@ function pageLoaded() {
     document.getElementById('playResume').addEventListener('click', function(){
         document.getElementById('resume').classList.add('displaynone');
         updateScore();
+        //interface
         document.querySelector('#infoPlayer').querySelector('h3').innerHTML = nameplayer;
         document.querySelector('#infoPlayer').querySelector('h2').innerHTML = playerPoint;
         document.querySelector('#infoBots').querySelector('h2').innerHTML = botsPoint;
         document.querySelector('#nbPartie').innerHTML = nbGame;
         document.querySelector('#currentPartie').innerHTML = currentPartie; 
+
+        //resume
+         
     });
 
 
