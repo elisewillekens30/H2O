@@ -82,6 +82,16 @@ h1{
   transform: scaleX(.9);
 }
 
+.removebtn{
+  position: absolute;
+  left: calc(30% - 75px);
+}
+
+.startnew{
+  position: absolute;
+  left: calc(70% - 75px);
+}
+
 button:focus {outline:0;}
 input:focus{outline: 0;}
 
@@ -209,14 +219,15 @@ input:focus{outline: 0;}
   height: 50px;
 }
 
-#end > div > div{
+#end > div > div, #remove > div > div > div {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   font-size: 20pt;
 }
 
-#end > div > div > div{
+#end > div > div > div,
+#remove > div > div > div > div{
   display: flex;
   flex-direction: column;
   font-size: 20pt;

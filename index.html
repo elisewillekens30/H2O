@@ -37,7 +37,7 @@
     Oops! looks like your browser does not support canvas tag
   </canvas>
 
-  <div id="form" class="popup">
+  <div id="form" class="popup displaynone">
     <div>
       <div class="name"><h1>H2O</h1></div>
       <label for="name">Your player Name:</label>
@@ -46,6 +46,19 @@
       <input type="number" id="nbparties" name="number" value="3" range="1"><br>
       <button id="playForm" class="playbtn">Play</button>
     </div> 
+  </div>
+
+  <div id="resume" class="popup displaynone>
+    <div>
+      <div class="name"><h1>H2O</h1></div>
+      <p>Resume the last part</p>
+      <div>
+        <div><span id="namePlayerend">Player</span><span id="pointsPlayerend">0</span> / <span id="totalPartiesPlayer">0</span></div>
+        <div><span>Bots</span><span id="pointsBotsend">0</span> / <span id="totalPartiesBots">0</span></div>
+      </div>
+      <button id="playResume" class="playbtn removebtn">resume</button>
+      <button id="playNew" class="playbtn startnew">Start a new</button>
+    </div>
   </div>
 
   <div id="rules" class="displaynone popup">
