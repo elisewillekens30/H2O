@@ -335,7 +335,7 @@ function pageLoaded() {
 
     function updateGame(){
         var textend = "";
-        if(currentPartie==nbGame-1){
+        if(currentPartie==nbGame){
             document.getElementById('end').classList.remove('displaynone');
             document.querySelector('#namePlayerend').innerHTML = nameplayer; 
             document.querySelector('#pointsPlayerend').innerHTML = playerPoint; 
