@@ -24,6 +24,7 @@ function pageLoaded() {
     var save = localStorage.getItem("save");
     console.log(save);
     if(save){
+        updateScore();
         document.getElementById('resume').classList.remove("displaynone");
         document.querySelector('#namePlayerResume').innerHTML = nameplayer;
         document.querySelector('#pointsPlayerResume').innerHTML = playerPoint;
