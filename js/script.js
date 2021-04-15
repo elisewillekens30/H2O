@@ -15,21 +15,44 @@ function pageLoaded() {
     var botsPoint=0;
     var playerPoint=0;
     var currentPartie=0;
-
+    var saveDonne =false;
 
     //initGame();
     initObject();
     initPlayer();
 
+    var save = localStorage.getItem("save");
+    console.log(save);
+    if(save){
+        document.getElementById('rules').classList.remove("displaynone");
+    }else{
+        document.getElementById('form').classList.remove("displaynone");
+    }
+
+
     document.getElementById('playForm').addEventListener('click', function (){
         document.getElementById('rules').classList.remove("displaynone");
         document.getElementById('form').classList.add('displaynone');
-        nameplayer = document.getElementById('nameplayer').value;
+
         document.querySelector('#infoPlayer').querySelector('h3').innerHTML = nameplayer;
-        nbGame = document.getElementById('nbparties').value;
+        document.querySelector('#infoPlayer').querySelector('h2').innerHTML = playerPoint;
+        document.querySelector('#infoBots').querySelector('h2').innerHTML = botsPoint;
         document.querySelector('#nbPartie').innerHTML = nbGame;
         document.querySelector('#currentPartie').innerHTML = 0; 
-        
+    });
+
+    document.getElementById('playResume').addEventListener('click', function(){
+        document.getElementById('resume').classList.add('displaynone');
+        updateScore();
+        document.querySelector('#infoPlayer').querySelector('h3').innerHTML = nameplayer;
+        document.querySelector('#nbPartie').innerHTML = nbGame;
+        document.querySelector('#currentPartie').innerHTML = currentPartie; 
+    });
+
+
+    document.getElementById('playNew').addEventListener('click', function(){
+        document.getElementById('resume').classList.add('displaynone');
+        document.getElementById('form').classList.remove('displaynone');
     });
 
     document.getElementById('playRules').addEventListener('click', function(){
@@ -142,6 +165,7 @@ function pageLoaded() {
 
 
     function playerAttack(){
+        sauvDonne = true; 
         initObject();
         animationdone = false;
         newround=true;
@@ -325,12 +349,12 @@ function pageLoaded() {
             document.querySelector('#infoPlayer').querySelector('h2').innerHTML = 0; 
             document.querySelector('#infoBots').querySelector('h2').innerHTML = 0; 
             document.querySelector('#currentPartie').innerHTML = 0; 
-            document.querySelector('#nbPartie').innerHTML = 0;    
+            document.querySelector('#nbPartie').innerHTML = 0; 
+            saveDonne =false;   
         }
     }
 
     function addScore(){
-
         var playerSauv = {
             "name": nameplayer, 
             "water":player.water, 
@@ -338,6 +362,9 @@ function pageLoaded() {
             "animation":player.animation,
             "win": player.win,
             "numberwin":playerPoint,
+            "save":saveDonne,
+            "currentPartie":currentPartie,
+            "nbGame":nbGame,
         };
         
         var botsSauv = {
@@ -348,25 +375,43 @@ function pageLoaded() {
             "win": bots.win,
             "numberwin":botsPoint,
         };
+
         
             // Store
             localStorage.setItem('playerSauv', JSON.stringify(playerSauv));
             localStorage.setItem('botsSauv', JSON.stringify(botsSauv));
+            localStorage.setItem('save', saveDonne);
+            
             // Retrieve
-            var donneesPlayer = localStorage.getItem("playerSauv");
-            var donneesBots = localStorage.getItem("botsSauv");
-            console.log(JSON.parse(donneesPlayer));
-            console.log(JSON.parse(donneesBots));
+           
          
     }
 
-   /* function updateScore(){
-        var datascore = JSON.parse(window.localStorage.getItem('player'));
-       
-        document.getElementById('highScore').innerHTML=datascore.score;
-        document.getElementById('highName').innerHTML=datascore.name;
+   function updateScore(){
+    var donneesPlayer = localStorage.getItem("playerSauv");
+    var donneesBots = localStorage.getItem("botsSauv");
 
-    }*/
+    console.log(JSON.parse(donneesPlayer));
+
+    nameplayer=donneesPlayer.name;
+    player.water= donneesPlayer.water;
+    player.play=donneesPlayer.play;
+    player.animation=donneesPlayer.animation;
+    player.win=donneesPlayer.win;
+    playerPoint=donneesPlayer.numberwin;
+    saveDonne=donneesPlayer.saveDonne;
+    currentPartie=donneesPlayer.currentPartie;
+    nbGame=donneesPlayer.nbGame;
+
+
+    console.log(JSON.parse(donneesBots));
+
+    bots.water= donneesBots.water;
+    bots.play=donneesBots.play;
+    bots.animation=donneesBots.animation;
+    bots.win=donneesBots.win;
+    botsPoint=donneesBots.numberwin;
+    }
 
 }
 
