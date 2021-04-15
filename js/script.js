@@ -24,7 +24,7 @@ function pageLoaded() {
     var save = localStorage.getItem("save");
     console.log(save);
     if(save){
-        document.getElementById('rules').classList.remove("displaynone");
+        document.getElementById('resume').classList.remove("displaynone");
     }else{
         document.getElementById('form').classList.remove("displaynone");
     }
