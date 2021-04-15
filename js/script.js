@@ -16,6 +16,7 @@ function pageLoaded() {
     var playerPoint=0;
     var currentPartie=1;
     var saveDonne =false;
+    var nbGame ="";
 
     //initGame();
     initObject();
@@ -368,6 +369,7 @@ function pageLoaded() {
     }
 
     function addScore(){
+        console.log(nbGame);
         var playerSauv = {
             "name": nameplayer, 
             "water":player.water, 
