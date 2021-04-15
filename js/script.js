@@ -405,7 +405,7 @@ function pageLoaded() {
     var donneesPlayer = localStorage.getItem("playerSauv");
     var donneesBots = localStorage.getItem("botsSauv");
 
-    console.log(JSON.parse(donneesPlayer));
+    donneesPlayer=JSON.parse(donneesPlayer);
 
     nameplayer=donneesPlayer.name;
     player.water= donneesPlayer.water;
@@ -419,8 +419,7 @@ function pageLoaded() {
 
     console.log(donneesPlayer.name);
 
-
-    console.log(JSON.parse(donneesBots));
+    donneesBots=(JSON.parse(donneesBots);
 
     bots.water= donneesBots.water;
     bots.play=donneesBots.play;
