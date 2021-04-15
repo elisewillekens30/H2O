@@ -168,7 +168,7 @@ function pageLoaded() {
 
 
     function playerAttack(){
-        sauvDonne = true; 
+        saveDonne = true; 
         initObject();
         animationdone = false;
         newround=true;
