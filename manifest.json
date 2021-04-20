@@ -28,7 +28,7 @@
         "type": "image/png"
     }, {
         "src": "images/icons/maskable_icon.png",
-        "sizes": "192x192",
+        "sizes": "196x196",
         "type": "image/png",
         "purpose": "any maskable"
     }],
@@ -38,5 +38,5 @@
     "display": "minimal-ui",
     "orientation": "landscape",
     "scope": "/",
-    "start_url": "https://elisewillekens30.github.io/H2O/index.html"
+    "start_url": "https://elisewillekens30.github.io/H2O/index.htlm"
 }

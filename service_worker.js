@@ -1,4 +1,4 @@
-var cacheName = 'h2Opwa';
+var cacheName = 'muddygames-pwa';
 var filesToCache = [
   'https://elisewillekens30.github.io/H2O/index.html',
   'https://elisewillekens30.github.io/H2O/css/style.css',
@@ -13,7 +13,6 @@ self.addEventListener('install', function(e) {
     })
   );
 });
-
 
 /* Serve cached content when offline, examine Cache Storage */
 self.addEventListener('fetch', function(e) {
