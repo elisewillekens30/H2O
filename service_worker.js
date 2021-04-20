@@ -1,4 +1,4 @@
-var cacheName = 'muddygames-pwa';
+var cacheName = 'h2o-pwa';
 var filesToCache = [
   'https://elisewillekens30.github.io/H2O/index.html',
   'https://elisewillekens30.github.io/H2O/css/style.css',
