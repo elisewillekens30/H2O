@@ -3,6 +3,6 @@ window.onload = () => {
 
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker
-             .register('https://elisewillekens30.github.io/H2O/register.js');
+             .register('https://elisewillekens30.github.io/H2O/service_worker.js');
   }
 }
