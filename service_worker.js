@@ -1,8 +1,8 @@
 var cacheName = 'h2o-pwa';
 var filesToCache = [
-  'index.html',
-  'css/style.css',
-  'js/script.js'
+  'https://elisewillekens30.github.io/H2O/index.html',
+  'https://elisewillekens30.github.io/H2O/css/style.css',
+  'https://elisewillekens30.github.io/H2O/js/script.js'
 ];
 
 /* Cache contents when Offline See Cache */
