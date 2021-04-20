@@ -58,8 +58,6 @@ function pageLoaded() {
         document.querySelector('#infoBots').querySelector('h2').innerHTML = botsPoint;
         document.querySelector('#nbPartie').innerHTML = nbGame;
         document.querySelector('#currentPartie').innerHTML = currentPartie; 
-
-        //resume
          
     });
 
