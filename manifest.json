@@ -1,6 +1,11 @@
 {
     "name": "MuddyGames Progressive Web Application",
     "short_name": "MuddyGames PWA",
+    "theme_color": "#ffffff",
+    "background_color": "#000000",
+    "display": "minimal-ui",
+    "orientation": "landscape",
+    "start_url": "https://elisewillekens30.github.io/H2O/index.html",
 
     "icons": [{
         "src": "images/icons/128_128.png",
@@ -31,11 +36,5 @@
         "sizes": "196x196",
         "type": "image/png",
         "purpose": "any maskable"
-    }],
-
-    "theme_color": "#ffffff",
-    "background_color": "#000000",
-    "display": "minimal-ui",
-    "orientation": "landscape",
-    "start_url": "https://elisewillekens30.github.io/H2O/index.html"
+    }]
 }
